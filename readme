@@ -1,0 +1,23 @@
+This project is a Data Profiler web application built using Streamlit and the YData Profiling library (formerly known as pandas-profiling). The application allows users to upload data files (either .csv or .xlsx), and then generates a detailed profile report of the uploaded dataset, summarizing key statistics, data distributions, correlations, and other insights.
+
+Key Features:
+File Upload: The user can upload a .csv or .xlsx file through the sidebar. The app ensures that the file size doesn't exceed 10 MB.
+File Validation: The app validates the file extension to only allow .csv or .xlsx files.
+Report Generation: Once the file is uploaded, the app generates a profiling report for the dataset. The report includes statistics like data types, missing values, distribution charts, correlations, and more.
+Customizable Report Options: Users can choose to generate a minimal report (less detailed) if they prefer. They can also select a display mode for the report, with three options:
+Primary: The default display.
+Dark: Dark theme for the report.
+Orange: An alternative color scheme for the report.
+Sheet Selection for Excel Files: If an Excel file is uploaded, the user can select the sheet to analyze.
+Error Handling: The app includes checks for file types and sizes. If the uploaded file exceeds the size limit or is not a supported format, the user is notified with an error message.
+How It Works:
+The user uploads a file via a file uploader in the sidebar.
+The file is validated for format and size.
+If valid, the app loads the data into a Pandas DataFrame.
+The ydata_profiling.ProfileReport function generates a detailed report, which is displayed in the main area of the app using st_profile_report.
+Technologies Used:
+Streamlit: For creating the interactive web interface.
+Pandas: For handling and processing data.
+YData Profiling: For generating the detailed data profiling reports.
+Streamlit Pandas Profiling: For displaying the profiling reports directly in the Streamlit app.
+This app provides an easy-to-use interface for exploring and understanding datasets by generating comprehensive reports with minimal configuration.
